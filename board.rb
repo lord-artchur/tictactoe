@@ -14,11 +14,18 @@ class GameBoard
     puts "#{board[6]} | #{board[7]} | #{board[8]}"
   end
 
-  def place_token(cell)
+  def place_token(cell, token)
     puts 'That spot has been chosen already!' if @board[cell] != cell
+  else @board[cell] = token
   end
 
-  def check_for_win; end
+  def check_for_win
+  if @board[0] == @board[1] && @board[2]
+    return true
+  elsif 
+  end
 
-  def check_for_tie; end
+  def check_for_tie
+  if @board[0..8] != 
+  end
 end

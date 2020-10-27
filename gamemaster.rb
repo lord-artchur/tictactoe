@@ -1,7 +1,7 @@
 # run the actual game
 class GameMaster
   @@game_total = 0
-      attr_accessor :first_player
+  attr_accessor :first_player
   def initialize
     @first_player
     @@game_total += 1
@@ -16,22 +16,22 @@ class GameMaster
     sleep 1
   end
 
-  def first_up(playerOne, PlayerTwo)
+  def first_up(playerOne, playerTwo)
     puts "Let's see who goes first...\n "
     sleep 1
     puts "Hmm... how to do this...\n "
     sleep 1
     puts "I know, a coin toss!\n"
     sleep 2
-    puts "Nevermind, we don't have the budget for that. I'll just just use \nsome magic computer stuff."
+    puts "Nevermind, we don't have the budget for that. I'll just just use \nsome magic computer stuff.\n"
     sleep 1
     puts "Calculating...\n "
     sleep 2
     @first_player = if rand * 1 >= 5
-                       playerOne.name
-                     else
-                       playerTwo.name
-                     end
+                      playerOne.name
+                    else
+                      playerTwo.name
+                    end
     puts "#{@first_player}, you're up first!\n "
   end
 end
