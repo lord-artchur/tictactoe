@@ -33,10 +33,10 @@ class GameMaster
                     else
                       playerTwo.name
                     end
-    @second_player == if @first_player == playerOne.name
-                        playerTwo.name
-                      else playerOne.name
-                      end
+    @second_player = if @first_player == playerOne.name
+                       playerTwo.name
+                     else playerOne.name
+                     end
     puts "#{@first_player}, you're up first!\n "
   end
 
