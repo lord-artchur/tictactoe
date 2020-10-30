@@ -6,8 +6,8 @@ require_relative 'player'
 
 game = GameMaster.new
 board = GameBoard.new
-game.introduction
+game.intro
 playerOne = Player.new
 playerTwo = Player.new
 game.first_up(playerOne, playerTwo)
-game.play_turn unless board.check_for_win || board.check_for_tie
+game.play_turn(playerOne, playerTwo, board) unless board.check_for_win || board.check_for_tie
