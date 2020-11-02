@@ -17,9 +17,9 @@ class GameBoard
 
   # check if cell is empty, if so, player player token
   def place_token(cell, token)
-    if @board[cell] != cell
+    if (@board[cell].to_i - 1) != cell
       puts 'That spot has been chosen already!'
-    else @board[cell] = token
+    else @board[cell - 1] = token
     end
   end
 
@@ -42,8 +42,11 @@ class GameBoard
   def check_for_tie
     usedBlockCounter = 0
     @board.each do |x|
-      usedBlockCounter += 1 if x != @board[x].index + 1
+      usedBlockCounter += 1 if x != (@board[x].index + 1)
     end
-    return true if (check_for_win == false) && usedBlockCounter == 9
+  end
+  if (check_for_win == false) && usedBlockCounter == 9
+    return true
+  else false
   end
 end

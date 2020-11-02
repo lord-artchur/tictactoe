@@ -22,9 +22,9 @@ class GameMaster
     sleep 1
     puts "Hmm... how to do this...\n "
     sleep 1
-    puts "I know, a coin toss!\n"
+    puts "I know, a coin toss!\n "
     sleep 2
-    puts "Nevermind, we don't have the budget for that. I'll just just use \nsome magic computer stuff.\n"
+    puts "Nevermind, we don't have the budget for that. I'll just just use \nsome magic computer stuff.\n "
     sleep 1
     puts "Calculating...\n "
     sleep 2
