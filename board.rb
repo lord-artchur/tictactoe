@@ -42,7 +42,7 @@ class GameBoard
   # check board tie
   def check_for_tie
     usedBlockCounter = 0
-    @board.each { |x| usedBlockCounter += 1 if x != @board[x].index + 1 }
+    @board.each { |x| usedBlockCounter += 1 if x.to_i != @board.index(x) + 1 }
     if (check_for_win == false) && usedBlockCounter == 9
       true
     else false
