@@ -36,17 +36,16 @@ class GameBoard
     elsif @board[8] == (@board[5] && @board[2])
       true
     end
+    false
   end
 
-  # check board for tie
+  # check board tie
   def check_for_tie
     usedBlockCounter = 0
-    @board.each do |x|
-      usedBlockCounter += 1 if x != (@board[x].index + 1)
+    @board.each { |x| usedBlockCounter += 1 if x != @board[x].index + 1 }
+    if (check_for_win == false) && usedBlockCounter == 9
+      true
+    else false
     end
-  end
-  if (check_for_win == false) && usedBlockCounter == 9
-    return true
-  else false
   end
 end

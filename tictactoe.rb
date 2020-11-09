@@ -6,6 +6,9 @@ require_relative 'player'
 
 game = GameMaster.new
 board = GameBoard.new
+board.display_board
+board.check_for_tie
+board.check_for_win
 # game.intro
 playerOne = Player.new
 playerTwo = Player.new
