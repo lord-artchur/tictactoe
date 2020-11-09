@@ -42,7 +42,7 @@ class GameMaster
 
   # play a turn
   def play_turn(playerOne, playerTwo, board)
-    puts "#{@first_player}, choose a square.\n"
+    puts "#{@first_player}, choose a square.\n "
     board.display_board
     cell = gets.chomp.to_i
     if @first_player == playerOne.name
@@ -50,7 +50,7 @@ class GameMaster
     elsif @first_player == playerTwo.name
       board.place_token(cell, playerTwo.token)
     end
-    puts "#{@second_player}, choose a square.\n"
+    puts "#{@second_player}, choose a square.\n "
     board.display_board
     cell = gets.chomp.to_i
     if @second_player == playerOne.name
